@@ -1,0 +1,543 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+  height: auto;
+  display: grid;
+  grid-template-areas:
+  'cake1 cake2 cake3 aside'
+  'cake4 cake5 cake6 aside'
+  'cake7 cake8 cake9 aside';
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  
+}
+
+.cake1 {
+  grid-area: cake1;
+}
+
+.cake2 {
+  grid-area: cake2;
+}
+
+.cake3 {
+  grid-area: cake3;
+}
+
+.cake4 {
+  grid-area: cake4;
+}
+
+.cake5 {
+  grid-area: cake5;
+}
+
+.cake6 {
+  grid-area: cake6;
+}
+
+.cake7 {
+  grid-area: cake7;
+}
+
+.cake8 {
+  grid-area: cake8;
+}
+
+.cake9 {
+  grid-area: cake9;
+}
+
+aside {
+  grid-area: aside;
+}
+
+img {
+  height: auto;
+  width: 160px;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.cake {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  background-color: rgb(246,247,248);
+  margin: 1rem;
+  border-radius: 0.5rem;
+  color: rgb(3, 3, 84);
+  transition: 0.5s ease-in-out;
+  border: 1px solid rgb(223, 222, 222);
+
+}
+
+.cake:hover {
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease-in-out;
+}
+
+.upper-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(246,247,248);
+  margin-bottom: 0.5rem;
+}
+
+
+.lower-card {
+  margin-top: 1rem;
+  border-top: 1px solid lightgray;
+}
+
+.lower-card > * {
+  padding-top: 1rem;
+}
+
+
+.right-upper {
+  background-color: rgb(246,247,248);
+  max-width: 100%;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.left-upper {
+  background-color: rgb(246,247,248);
+}
+
+.header {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.header-h1 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.red {
+  color: red;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+}
+
+h3 {
+  padding: 0.3rem;
+  background-color: rgb(246,247,248);
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.cake-name {
+  font-weight: bold;
+}
+
+.aside-settings {
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
+  background-color: rgb(246,247,248);
+  border-radius: 0.5rem;
+  border: 1px solid rgb(223, 222, 222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside-settings > p {
+  padding-bottom: 1rem;
+}
+
+.sort {
+  margin-top: 2rem;
+}
+
+.sort > * {
+  padding: 1rem 3rem;
+  background-color: rgb(227,230,233);
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts {
+  padding: 1rem;
+}
+
+.copyright {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[for="purig"]:checked ~ .main-content > div:not(.purig) {
+  display: none;
+}
+
+input[for="rulet"]:checked ~ .main-content > div:not(.rulet) {
+  display: none;
+}
+
+input[for="surnuku"]:checked ~ .main-content > div:not(.surnuku) {
+  display: none;
+}
+
+input[for="tistechko"]:checked ~ .main-content > div:not(.tistechko) {
+  display: none;
+}
+
+input[for="tort"]:checked ~ .main-content > div:not(.tort) {
+  display: none;
+}
+
+input {
+  position: absolute;
+}
+
+input[for="purig"] {
+  left: 88.5vw;
+  top: 37vh;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[for="rulet"] {
+  left: 88.5vw;
+  top: 46vh;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[for="surnuku"] {
+  left: 88.5vw;
+  top: 55vh;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[for="tistechko"] {
+  left: 88.5vw;
+  top: 64.5vh;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[for="tort"] {
+  left: 88.5vw;
+  top: 73.5vh;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[for="default"] {
+  left: 88.5vw;
+  top: 83vh;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+
+input[for="purig"]:checked ~ .main-content > .aside-settings > .sort > .purig {
+  background-color: rgb(208, 211, 213);
+}
+
+input[for="rulet"]:checked ~ .main-content > .aside-settings > .sort > .rulet {
+  background-color: rgb(208, 211, 213);
+}
+
+input[for="surnuku"]:checked ~ .main-content > .aside-settings > .sort > .surnuku {
+  background-color: rgb(208, 211, 213);
+}
+
+input[for="tistechko"]:checked ~ .main-content > .aside-settings > .sort > .tistechko {
+  background-color: rgb(208, 211, 213);
+}
+
+input[for="tort"]:checked ~ .main-content > .aside-settings > .sort > .tort {
+  background-color: rgb(208, 211, 213);
+}
+
+input[for="default"]:checked ~ .main-content > .aside-settings > .sort > .default {
+  background-color: rgb(208, 211, 213);
+}
+
+input[for="tort"]:checked ~ .main-content {
+  grid-template-areas:
+  'cake2 cake7 cake9 aside'
+  'cake4 cake5 cake6 aside'
+  'cake1 cake8 cake3 aside';
+}
+
+input[for="tistechko"]:checked ~ .main-content {
+  grid-template-areas:
+  'cake3 cake6 cake1 aside'
+  'cake4 cake5 cake2 aside'
+  'cake7 cake8 cake9 aside';
+}
+
+input[for="surnuku"]:checked ~ .main-content {
+  grid-template-areas:
+  'cake5 cake2 cake3 aside'
+  'cake4 cake1 cake6 aside'
+  'cake7 cake8 cake9 aside';
+}
+
+input[for="rulet"]:checked ~ .main-content {
+  grid-template-areas:
+  'cake1 cake8 cake3 aside'
+  'cake4 cake5 cake6 aside'
+  'cake7 cake2 cake9 aside';
+}
+
+input[for="purig"]:checked ~ .main-content {
+  grid-template-areas:
+  'cake4 cake2 cake3 aside'
+  'cake1 cake5 cake6 aside'
+  'cake7 cake8 cake9 aside';
+}
+
+
+@media screen and (max-width: 1200px) {
+  .calories,
+  .aside-settings > p,
+  .lower-card {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .cake-type,
+  .cake-name{
+    display: inline;
+  }
+
+  .upper-card {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .cake {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .cake h3 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .main-content {
+    grid-template-areas:
+    'aside aside aside'
+    'cake1 cake2 cake3'
+    'cake4 cake5 cake6'
+    'cake7 cake8 cake9';
+  }
+
+  .aside-settings > .sort > * {
+    text-align: center;
+  }
+
+  .aside-settings > .sort {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .sort {
+    margin-top: 0;
+  }
+  .aside-settings {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+
+  .sort > * {
+    width: 25%;
+  }
+
+  input[for="purig"] {
+    left: 25vw;
+    top: 17vh;
+  }
+  
+  input[for="rulet"] {
+    left: 48vw;
+    top: 17vh;
+  }
+  
+  input[for="surnuku"] {
+    left: 70.7vw;
+    top: 17vh;
+  }
+  
+  input[for="tistechko"] {
+    left: 25vw;
+    top: 29vh;
+  }
+  
+  input[for="tort"] {
+    left: 48vw;
+    top: 29vh;
+  }
+  
+  input[for="default"] {
+    left: 70.7vw;
+    top: 29vh;
+  }
+
+  input[for="tort"]:checked ~ .main-content {
+    grid-template-areas:
+    'aside aside aside'
+    'cake2 cake7 cake9'
+    'cake4 cake5 cake6'
+    'cake1 cake8 cake3';
+  }
+  
+  input[for="tistechko"]:checked ~ .main-content {
+    grid-template-areas:
+    'aside aside aside'
+    'cake3 cake6 cake1'
+    'cake4 cake5 cake2'
+    'cake7 cake8 cake9';
+  }
+  
+  input[for="surnuku"]:checked ~ .main-content {
+    grid-template-areas:
+    'aside aside aside'
+    'cake5 cake2 cake3'
+    'cake4 cake1 cake6'
+    'cake7 cake8 cake9';
+  }
+  
+  input[for="rulet"]:checked ~ .main-content {
+    grid-template-areas:
+    'aside aside aside'
+    'cake1 cake8 cake7'
+    'cake4 cake5 cake6'
+    'cake2 cake3 cake9';
+  }
+  
+  input[for="purig"]:checked ~ .main-content {
+    grid-template-areas:
+    'aside aside aside'
+    'cake4 cake2 cake3'
+    'cake1 cake5 cake6'
+    'cake7 cake8 cake9';
+  }
+} 
+
+@media screen and (max-width: 730px) {
+  .right-upper {
+    display: none;
+  }
+  
+  .left-upper {
+    background-color: transparent;
+  }
+
+  .upper-card {
+    background-color: transparent;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  img {
+    border-radius: 1rem;
+  }
+
+  .cake {
+    background-color: transparent;
+    border: none;
+  }
+
+  .cake:hover {
+    box-shadow: none;
+  }
+
+  .sort > * {
+    width: 40%;
+  }
+
+  .aside-settings {
+    background-color: transparent;
+    border: none;
+  }
+
+  input[for="purig"] {
+    left: 25vw;
+    top: 17vh;
+  }
+  
+  input[for="rulet"] {
+    left: 64vw;
+    top: 17vh;
+  }
+  
+  input[for="surnuku"] {
+    left: 24vw;
+    top: 29vh;
+  }
+  
+  input[for="tistechko"] {
+    left: 64vw;
+    top: 29vh;
+  }
+  
+  input[for="tort"] {
+    left: 24vw;
+    top: 40vh;
+  }
+  
+  input[for="default"] {
+    left: 64vw;
+    top: 40vh;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .copyright {
+    padding-top: 0;
+  }
+
+  .contacts {
+    padding-bottom: 0;
+  }
+}
